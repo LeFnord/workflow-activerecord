@@ -26,7 +26,7 @@ config/secrets.yml
 /.bundle
 /vendor/bundle
 
-Gemfile.lock
+*Gemfile.lock
 .ruby-version
 .ruby-gemset
 

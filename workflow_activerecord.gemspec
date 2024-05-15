@@ -30,11 +30,11 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency 'workflow', '~> 3.0'
   gem.add_runtime_dependency 'activerecord', rails_versions
 
-  gem.add_development_dependency 'rdoc',          '~> 6.1'
-  gem.add_development_dependency 'bundler',       '~> 2.0'
-  gem.add_development_dependency 'mocha',         '~> 1.8'
-  gem.add_development_dependency 'rake',          '~> 12.3'
-  gem.add_development_dependency 'minitest',      '~> 5.11'
+  gem.add_development_dependency 'rdoc',          '~> 6.4'
+  gem.add_development_dependency 'bundler',       '~> 2.3'
+  gem.add_development_dependency 'mocha',         '~> 2.2'
+  gem.add_development_dependency 'rake',          '~> 13.1'
+  gem.add_development_dependency 'minitest',      '~> 5.21'
   gem.add_development_dependency 'sqlite3',       '~> 1.3'
 end
 

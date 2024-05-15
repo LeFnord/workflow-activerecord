@@ -9,7 +9,7 @@
 
 Major+minor versions of workflow-activerecord are based on the oldest
 compatible ActiveRecord API. To use [`workflow`][workflow] with
-Rails/ActiveRecord 6.0, 6.1, 7.0 please use:
+Rails/ActiveRecord 6.*, 7.* please use:
 
     gem 'workflow-activerecord', '~> 6.0'
 
@@ -213,7 +213,7 @@ About
 
 Author: Vladimir Dobriakov, <https://infrastructure-as-code.de>
 
-Copyright (c) 2010-2022 Vladimir Dobriakov and Contributors
+Copyright (c) 2010-2024 Vladimir Dobriakov and Contributors
 
 Copyright (c) 2008-2009 Vodafone
 

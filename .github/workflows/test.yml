@@ -10,18 +10,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [2.7, 3.0, 3.1]
-        gemfile: [activerecord-6.0.Gemfile, activerecord-6.1.Gemfile, activerecord-7.0.Gemfile]
-        exclude:
-          - ruby: 3.1
-            gemfile: activerecord-6.0.Gemfile
-          - ruby: 3.1
-            gemfile: activerecord-6.1.Gemfile
+        ruby: [3.3]
+        gemfile: [activerecord-6.0.Gemfile, activerecord-6.1.Gemfile, activerecord-7.0.Gemfile, activerecord-7.1.Gemfile]
     env:
       BUNDLE_GEMFILE: gemfiles/${{matrix.gemfile}}
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:

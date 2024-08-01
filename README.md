@@ -185,6 +185,33 @@ You can have a look at an advanced [`on_transition`][] example in
 [`on_transition`]: https://github.com/geekq/workflow#on_transition
 [advanced_hooks_and_validation_test]: http://github.com/geekq/workflow-activerecord/blob/develop/test/advanced_hooks_and_validation_test.rb
 
+
+### Handling the state transition in a transaction
+
+You might want to perform the state transition in a database transaction,
+so that the state is persisted atomically with all the other attributes.
+To do so, define a module:
+
+```ruby
+module TransitionTransaction
+  def process_event!(name, *, **)
+    transaction { super(name, *, **) }
+  end
+end
+```
+
+and then prepend it in your model:
+
+```ruby
+class Task
+  workflow do
+    ...
+  end
+
+  prepend TransitionTransaction
+end
+```
+
 Changelog
 ---------
 

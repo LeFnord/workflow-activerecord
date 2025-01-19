@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [3.3]
+        ruby: [3.3, 3.4]
         gemfile: [activerecord-7.1.Gemfile, activerecord-7.2.Gemfile]
     env:
       BUNDLE_GEMFILE: gemfiles/${{matrix.gemfile}}
